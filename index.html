@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html  lang="en" dir="ltr">
+
+<head>
+
+ <title>Player</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+ <link rel="stylesheet" href="Style.css">
+
+</head>
+
+<body>
+
+
+  <div class="filter">
+
+ </div>
+
+ <table >
+ 
+ <tr>
+ 
+ <th>All</th>
+ <th>
+   <div class="wrap">
+   <div class="search">
+      <input type="text" class="searchTerm" placeholder="Search">
+      <button type="submit" class="searchButton">
+         <i class="material-icons">search</i>
+     </button>
+   </div>
+</div>
+
+ </th>
+ 
+ </tr>
+
+<tr>
+
+ <th> </th>
+
+ <th>User_name</th>
+
+ <th>Rank</th>
+
+ <th>Score</th>
+ 
+ 
+
+ </tr>
+
+
+  <tr>
+
+ <td>1</td>
+
+ <td>Ayush</td>
+
+ <td>1</td>
+ <td>6780</td>
+
+
+ 
+
+ </tr>
+
+ <tr>
+
+ <td>2</td>
+
+ <td>Shivangi</td>
+
+ <td>2</td>
+
+ <td>890 </td>
+ 
+ 
+
+
+
+ </tr>
+
+ <tr>
+
+ <td>3</td>
+
+ <td>Harsh</td>
+
+ <td>3</td>
+
+ <td>562 </td>
+ 
+ 
+
+
+
+ </tr>
+
+ 
+
+ </table>
+
+ 
+ 
+
+    <script>
+      let options = {
+        startAngle: -1.55,
+        size: 55,
+        value: 0.85,
+        fill: {gradient: ['#d0f224', '#cbf10e']}
+      }
+      $(".circle .bar").circleProgress(options).on('circle-animation-progress',
+      function(event, progress, stepValue){
+        $(this).parent().find("span").text(String(stepValue.toFixed(2).substr(2)) + "%");
+      });
+      $(".js .bar").circleProgress({
+        value: 0.70
+      });
+      $(".react .bar").circleProgress({
+        value: 0.60
+      });
+    </script>
+
+ 
+
+ </body>
+
+</html>
